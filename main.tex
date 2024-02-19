@@ -1,0 +1,222 @@
+%% start of file `new.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{purple}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\rmdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+\setlength{\hintscolumnwidth}{1.4cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\firstname{Harshita}
+\familyname{Sahijwani}
+% \title{Curriculum Vitae}               % optional, remove the line if not wanted
+% \address{Address}    % optional, remove the line if not wanted
+% \mobile{678-469-5986}                     % optional, remove the line if not wanted
+\email{hsahijw@emory.edu}                          % optional, remove the line if not wanted
+\social[linkedin]{harshita-sahijwani}
+\homepage{cs.emory.edu/~hsahijw/}                    % optional, remove the line if not wanted
+% \extrainfo{additional information}            % optional, remove the line if not wanted
+\extrainfo{\href{https://scholar.google.com/citations?user=Pn8XLSkAAAAJ}{Google Scholar: Harshita Sahijwani}}
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{Aug'17 -- May'24}{Ph.D. in Computer Science and Informatics}{}{Cum. GPA: 3.86/4, \newline Emory University, Atlanta, USA}{}{Advisor: Eugene Agichtein}{}
+
+\cventry{Aug'13 -- May'17}{B. Tech in Information and Communication Technology}{}{Cum. GPA: 3.42/4,\newline DA-IICT, Gandhinagar, India}{}{Honors in ICT, Minor in Computational Science}{}
+% \cvlistitem {\textbf{B.Sc. Thesis:} "\textit{Title of B.Sc. Thesis}," under supervision of \textbf{Prof. SupervisorName} }
+
+\section{Research Interests}
+% \hspace{1.9cm}Information Retrieval
+\cventry{}{Information Retrieval, Dialog Systems, Natural Language Processing}{}{}{}{}
+ 
+
+
+\section{Industry Experience}
+\cventry{Jun'22 -- Sep'22}{Amazon, Alexa Shopping}{Applied Scientist Intern}{Seattle, WA}{\newline Identifying subjective e-commerce queries and analyzing user behavior on them}{}
+% \cvlistitem{Defined a taxonomy for subjective queries in e-commerce.}
+\cvlistitem{Trained classification models for identifying subjective queries using a combination of text embeddings and user behavior features. The model had 70\% F1 score}
+% \cventry{}{\normalfont The classifier had 70\% F1 score}{}{}{}{}
+
+\cventry{May'21 -- Aug'21}{Procter \& Gamble, Data Science \& AI}{Data Science Intern}{Mason, OH (Remote)}{\newline Generating clarification questions for conversational question-answering system}{}
+% \cvlistitem{Performed experiments for clarification question generation to enable multi-turn dialogue with a search-based question-answering system.}
+\cvlistitem{Trained a few-shot question generation model using crowd-sourced reading comprehension data. The model showed 7\% improvement in coherence over the baseline.}
+% \cventry{}{\normalfont The model showed 7\% improvement in coherence over the baseline}{}{}{}{}
+% \newline Developing a prototype for a question-answering chatbot for sleep-related queries
+
+\cventry{May'20 -- Aug'20}{Microsoft, Conversational Search Team}{Research Intern}{Bellevue, WA  (Remote)}{\newline Clarifying search intent for ambiguous queries on Bing}{}
+% \cvlistitem{Worked with the team responsible for Bing's feature of asking a clarifying question and a list of intents to choose from}
+\cvlistitem{Developed a model to rank groups of query intents that improved the click-through rate for suggested queries in simulation and outperformed the baseline in a human evaluation task}
+% Trained a ranking model to select the most appropriate group of intents to suggest in response to an ambiguous query on Bing. 
+% \cvlistitem{Augmented the group ranking model used in production with new hand-engineered features to select the most coherent and relevant group of intents from all the related intents mined from search logs.}
+% \cventry{}{\normalfont The new model improved the click-through rate for options in a simulated experiment and also
+% significantly outperformed the baseline in a human evaluation task}{}{}{}{}
+
+\cventry{May'19 -- Aug'19}{Microsoft, Conversational Search Team}{Research Intern}{Bellevue, WA}{\newline Recommending relevant follow-up queries to a Bing user for a query about a complex task}{}
+\cvlistitem{Developed an unsupervised model to identify relevant follow-up topics from top search results. Human evaluators classified $\sim$95\% queries identified by the model as 'reasonable' or 'good'.}
+% Developed unsupervised and supervised models to identify relevant follow-up topics from top search results. Human evaluators classified $\sim$95\% of the suggested queries from the unsupervised model as 'reasonable' or 'good'.
+
+% \cvlistitem{Unsupervised model: Given the headings from the top 10 search results for a query about a complex task, applied K-means clustering on their intent embeddings to identify popular aspects of the task.}
+% \cvlistitem{Supervised ranking model: Trained a LambdaMART model with hand-engineered features to rank candidate aspects.}
+% \cventry{}{\normalfont Human evaluators classified $\sim$95\% of the suggested queries from the unsupervised model as 'reasonable' or 'good'
+% . The supervised model did not perform well due to limited training data
+% }{}{}{}{}
+
+% \cventry{May'16 -- Aug'16}{Software Development Intern}{RAx (by Enago)}{Gujarat, India}{\newline Scientific Literature Recommendation}{}
+% \cventry{}{\normalfont Increased the accuracy of the website's recommendation engine based on LDA topic modeling using Gensim and Elasticsearch}{}{}{}{}
+
+
+
+% \newpage
+\section{Publications}
+\cvitem{[1]}{\textbf{Harshita Sahijwani},  Kaustubh Dhole, Ankur Purwar, Venugopal Vasudevan, and Eugene Agichtein, \href{https://arxiv.org/abs/2305.00577}{\emph{``Contextual Response Interpretation for Automated Structured Interviews: A Case Study in Market Research''}} \underline{WWW Companion Proceedings}, ACM, 2023}
+
+\cvitem{[2]}{\textbf{Harshita Sahijwani}, Jason Choi and Eugene Agichtein, \href{https://arxiv.org/abs/2006.01926}{\emph{``Would You Like to Hear the News? Investigating Voice-Based Suggestions for Conversational News Recommendation''}} \underline{CHIIR}, ACM, 2020}
+
+\cvitem{[3]}{Ali Ahmadvand, \textbf{Harshita Sahijwani}, and Eugene Agichtein, \href{https://arxiv.org/abs/2005.13803}{\emph{``Would you Like to Talk about Sports Now? Towards Contextual Topic Suggestion for Open-Domain Conversational Agents''}} \underline{CHIIR}, ACM, 2020}
+
+\cvitem{[4]}{Sarah Finch, James Finch, Ali Ahmadvand, Ingyu Choi, Xian Dong, Ruixiang Qi, \textbf{Harshita Sahijwani}, Sergey Volokhin, Zihan Wang, Zihao Wang, Jinho  Choi, \href{https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexaprize/assets/challenge3/proceedings/Emory-Emora.pdf}{\emph{``Emora: An Inquisitive Social Chatbot Who Cares For You''}} \underline{Alexa Prize Proceedings}, Amazon, 2020}
+
+\cvitem{[5]}{Ali Ahmadvand, \textbf{Harshita Sahijwani}, Jason Choi and Eugene Agichtein, \href{https://arxiv.org/abs/2005.13798}{\emph{``ConCET: Entity-aware topic classification for open-domain conversational agents''}} \underline{CIKM}, ACM, 2019}
+
+\cvitem{[6]}{Ali Ahmadvand, Jason Choi, \textbf{Harshita Sahijwani}, Justus Schmidt,  Mingyang Sun, Sergey Volokhin, Zihao Wang, and Eugene Agichtein, \href{https://assets.amazon.science/69/92/5437c43946cc971aad12f0fbcbbe/an-open-domain-conversational-bot-for-personalized-information-access.pdf}{\emph{``Emory IrisBot: An Open-Domain Conversational Bot for Personalized Information Access''}} \underline{Alexa Prize Proceedings}, Amazon, 2018}
+
+% \cvitem{[7]}{Gaurav Maheshwari, Priyansh Trivedi, Harshita Sahijwani, Kunal Jha, Sourish Dasgupta, and Jens Lehmann, \href{https://arxiv.org/abs/1611.04822}{"SimDoc: Topic Sequence Alignment based Document Similarity Framework"} \textit{K-CAP}, ACM, 2017}
+\section{Research Experience}
+
+\cventry{Sep'22 – present}{Intent Classification for Health-Related Web Search Queries}{in collaboration with Kaiser Permanente}{under supervision of Eugene Agichtein}{\newline Currently working on intent classification for health-related search queries}{}
+
+\cventry{Aug'20 – May'22}{Contextual Response Interpretation in Structured Interviews}{in collaboration with Procter \& Gamble}{under supervision of Eugene Agichtein}{}{}
+\cvlistitem{Developed a conversational system for conducting market research interviews}
+\cvlistitem{Proposed methods for matching user responses to predefined answer options [1]}
+
+\cventry{May'18 -- Aug'20}{Search and Recommendation in Open-Domain Social Bots}{as part of the Alexa Prize Challenge}{under supervision of Eugene Agichtein and Jinho Choi [4][6]}{}{}
+% \newline Our team built a conversational AI system which could talk to a user about popular topics like movies, music, news, sports as well as their daily lives [4][6]
+\cvlistitem{Developed a module that answers news-related queries and recommends news. Conducted user study with different presentations of news recommendations [2]}
+\cvlistitem{Proposed and implemented entity linking and representation components for conversational topic classification [5]}
+\cvlistitem{Developed topic recommendation methods for open-domain socialbots [3]}
+
+
+% \cvlistitem{Proposed methods for matching user responses to one of a predefined list of answer options described in [1]}
+% Currently working on classifying queries on a health-related search website based on their intent
+
+% \section{Coursework}\cvlistitem {\textbf{Graduate\newline} Machine Learning, Information Retrieval, Artificial Intelligence, Natural Language Processing, Intelligent Assistants, Database Systems, Algorithms}
+% \cvlistitem {\textbf{Undergraduate\newline} Software Engineering, Modeling and Simulation, Selected Topics in Neural Networks, Operating Systems}
+% \cvlistitem {\textbf{Research Interest Title 3} \\Description}
+% \cvlistitem {\textbf{Research Interest Title 4} \\Description}
+
+% \section{Technical Skills}\cvlistitem {\textbf{Languages\newline} Proficient in Python, Java; Significant experience in C, C++; Some experience in Bash, SQL, JavaScript, HTML/CSS}
+% % , SPARQL
+% \cvlistitem {\textbf{Tools \& Technologies\newline} Git, PyTorch, Elasticsearch, Scikit-learn, TensorFlow, DynamoDB, Redis, AWS, Azure}
+% % openMP, MPI, OrientDB,Eclipse,Keras, Gensim,, MySQL, GCP
+\section{Awards}
+\cventry{2020}{Member of winning team}{}{}{\textbf{Amazon Alexa Prize 3}. Our team was awarded \$500,000 for advancing through two elimination rounds based on user ratings and then receiving the highest overall rating from the panel of final judges}{}
+\cventry{2019}{Recipient}{}{}{\textbf{CIKM Travel Grant}. Was awarded a \$1000 grant to present a paper at the 2019 CIKM Conference in Beijing}{}
+% \cvlistitem{\textbf{CIKM Travel Grant} Was awarded a \$1000 grant to present our paper at the 2019 CIKM Conference }
+% \cvlistitem{Honor3 Description }
+% \cvlistitem{Honor4 Description }
+
+\section{Teaching}
+\cventry{}{Intelligent Assistants}{Emory University}{Teaching Assistant}{Spring 2019}{}
+\cventry{}{Introduction to Computer Science}{Emory University}{Teaching Assistant}{Fall 2018}{}
+\cventry{}{Data Structures and Algorithms}{Emory University}{Teaching Assistant}{Spring 2018}{}
+\cventry{}{Basic Electronic Circuits}{DA-IICT}{Teaching Assistant}{Fall 2016}{}
+
+\section{Professional Service}
+\cventry{2022}{Program Committee Member}{CIKM 2022}{Reviewed 9 short papers}{}{}
+\cventry{2021}{Program Committee Member}{CIKM 2021}{Reviewed 9 short papers}{}{}
+\cventry{2020}{Program Committee Member}{CIKM 2020}{Reviewed 6 short papers}{}{}
+\cventry{2020}{Mentor}{Athena Pathways Mentorship Program}{Provided guidance for job application process}{}{}
+
+
+% \newpage
+
+
+
+
+% \cvlistitem{Author1 and Author2, "journal Paper Title," in \textit{journal Name}, vol. 00, no. 0, pp. 00-00, Month, year.}
+
+% inproceedings{sahijwani2020would,
+%   title={Would You Like to Hear the News? Investigating Voice-Based Suggestions for Conversational News Recommendation},
+%   author={Sahijwani, Harshita and Choi, Jason Ingyu and Agichtein, Eugene},
+%   booktitle={Proceedings of the 2020 Conference on Human Information Interaction and Retrieval},
+%   pages={437--441},
+%   year={2020}
+% }
+% @inproceedings{sahijwaninews,
+%   title="\href{https://drive.google.com/file/d/181VohDhl4KExxWCng0q6iyJH-T9tqkq4/view?usp=sharing}{Would You Like to Hear the News? Investigating Voice-Based Suggestions for Conversational News Recommendation}",
+%   author={Sahijwani, Harshita and Choi, Ingyu Jason and Agichtein, Eugene},
+%   booktitle={Conference on Human Information Interaction and Retrieval},
+%   year={2020},
+%   organization={ACM}
+% }
+% \section{Teaching Experiences}
+% \cventry{Date}{Position}{}{Course Name, UniversityName, City, Country}{}{}
+% \cventry{Date}{Position}{}{Course Name, UniversityName, City, Country}{}{}
+
+
+% \section{Related Courses}
+% \cvlistitem {Course1 Name: 0/4}
+% \cvlistitem {Course2 Name: 0/4}
+% \cvlistitem {Course3 Name: 0/4}
+% \cvlistitem {Course4 Name: 0/4}
+
+% \cvlistitem {IEEE International Black Sea Conference on Communications and Networking (BlackSeaCom 17), Istanbul, Turkey, June 2017}
+% \cvlistitem {4\textsuperscript{\textit{th}} COST Action IC1101 (OPTICWISE) Training School on optical wireless communications, September 7\textsuperscript{\textit{th}}-10\textsuperscript{\textit{th}} 2015 at Ozyegin University, Istanbul, Turkey}
+% \cvlistitem {1\textsuperscript{\textit{st}} International Conference on in Communications , Signal Processing, and their Applications (ICCSPA), February 12\textsuperscript{\textit{th}}-14\textsuperscript{\textit{th}} 2013 at American University of Sharjah, Sharjah, UAE.}
+
+
+% \section{Skills}
+% \cvlistitem {\textbf{Skill Set1} \\ Skills list}
+% \cvlistitem {\textbf{Skill Set2} \\\ Skills list}
+
+% \section{Languages}
+% \cvlistitem {\textbf{Language:} Level \\ Exam: 96/120 (Reading:00, Listening:00, Speaking:00, Writing:00)}
+
+% \cvlistitem {\textbf{Language:} Level \\ Exam: 96/120 (Reading:00, Listening:00, Speaking:00, Writing:00)}
+% \cvlistitem {\textbf{Language:} Level \\ Exam: 96/120 (Reading:00, Listening:00, Speaking:00, Writing:00)}
+
+
+% \section{Interests}
+% \cvitem{hobby 1}{Description}
+% \cvitem{hobby 2}{Description}
+% \cvitem{hobby 3}{Description}
+
+% \section{References}
+% \cvlistitem{\textbf{SupervisorName} \\ Department \\Faculty \\University \\City, Country\\email@email.com\\}
+
+% \section{Course Projects}
+
+% \cvlistitem{\textbf{Course Title 1} \\ \textit{Project Title:} Project Descriptions. }
+% \cvlistitem{\textbf{Course Title 2} \\ \textit{Project Title:} Project Descriptions. }
+% \cvlistitem{\textbf{Course Title 3} \\ \textit{Project Title:} Project Descriptions. }
+\end{document}
+
+
+%% end of file `template.tex'.
+
